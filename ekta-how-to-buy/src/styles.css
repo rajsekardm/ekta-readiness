@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(assets/css/roboto-fonts.css);
+
+:root {
+    --primary-text-color: #fb5b4c;
+    --primary-bg-color :#fb5b4c;
+    --primary-border-color: #fb5b4c;
+    --secondary-bg-color: #251e21;
+    --accent-text-color: #fff;
+    --accent-bg-color: #fff;
+    --border-rounded-md: 1rem;
+    --border-rounded-lg: 1.25rem;
+    --border-rounded-xl: 1.5rem;
+}
+
+body {
+    background-color: var(--secondary-bg-color);
+}
+
+.btn--primary {
+    background-color: var(--primary-bg-color);
+    border: 1px solid var(--primary-border-color);
+    color: var(--accent-text-color);
+}
+
+.btn--primary:hover {
+    background-color: var(--accent-bg-color);
+    border: 1px solid var(--primary-border-color);
+    color: var(--primary-text-color);
+}
+
+
+.bg--primary {
+    background-color: var(--primary-bg-color);
+}
+.rounded--md {
+    border-radius: var(--border-rounded-md);
+}
+.rounded--xl {
+    border-radius: var(--border-rounded-xl);
+}
