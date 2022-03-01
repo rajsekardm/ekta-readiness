@@ -1,0 +1,50 @@
+@font-face {
+    font-family: Lato-Thin;
+    src: url(../fonts/lato/Lato-Thin.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Lato-Light;
+    src: url(../fonts/lato/Lato-Light.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Lato-Regular;
+    src: url(../fonts/lato/Lato-Regular.ttf);
+    font-display: swap;
+}
+
+
+/* @font-face {
+    font-family: Lato-Medium;
+    src: url(../fonts/lato/Lato-Medium.ttf);
+    font-display: swap;
+} */
+
+@font-face {
+    font-family: Lato-Bold;
+    src: url(../fonts/lato/Lato-Bold.ttf);
+    font-display: swap;
+}
+
+.l-font--thin {
+    font-family: "Lato-Thin", Helvetica, sans-serif;
+}
+
+.l-font--light {
+    font-family: "Lato-Light", Helvetica, sans-serif;
+}
+
+.l-font--regular {
+    font-family: "Lato-Regular", Helvetica, sans-serif;
+}
+
+.l-font--medium {
+    font-family: "Lato-Medium", Helvetica, sans-serif;
+}
+
+.l-font--bold {
+    font-family: "Lato-Bold", Helvetica, sans-serif;
+}

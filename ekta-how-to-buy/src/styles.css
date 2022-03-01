@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url(assets/css/roboto-fonts.css);
+@import url(assets/css/lato-fonts.css);
 
 :root {
     --primary-text-color: #fb5b4c;
@@ -11,6 +12,10 @@
     --border-rounded-md: 1rem;
     --border-rounded-lg: 1.25rem;
     --border-rounded-xl: 1.5rem;
+    --font-size-banner-head: 70px;
+    --line-height-banner-head: 86px;
+    --font-size-banner-content: 30px;
+    --line-height-banner-content: 42px;
 }
 
 body {
@@ -38,4 +43,13 @@ body {
 }
 .rounded--xl {
     border-radius: var(--border-rounded-xl);
+}
+
+.fs__banner-head {
+    font-size: var(--font-size-banner-head);
+    line-height: var(--line-height-banner-head);
+}
+.fs__banner-content {
+    font-size: var(--font-size-banner-content);
+    line-height: var(--line-height-banner-content);
 }
