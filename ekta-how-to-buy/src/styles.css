@@ -18,6 +18,7 @@
     --border-etka-color: #d61f0e;
     --border-ethereum-color: #1346cb;
     --border-binance-color: #c38b02;
+    --border-steps-dashed-line: #ffb500;
     --btn-bg-metamask-color: #933c00;
     --btn-bg-ekta-color: #cd1200;
     --btn-bg-binance-color: #b65607;
@@ -173,4 +174,29 @@ hr:not([size]) {
 }
 .border--step {
     border: 1px solid var(--border-step-color);
+}
+.steps--line {
+    border-top: 1px dashed var(--border-steps-dashed-line);
+    border-width: 2px;
+    width: 70%;
+}
+.step3--line {
+    border-top: 1px dashed var(--border-steps-dashed-line);
+    border-width: 2px;
+    width: 40%;
+}
+.step4--line {
+    border-top: 1px dashed var(--border-steps-dashed-line);
+    border-width: 2px;
+    width: 70%;
+}
+.step3--line::after {
+    border-right: 1px dashed var(--border-steps-dashed-line);
+    border-width: 2px;
+    content: "";
+    width: 10em;
+    height: 32em;
+    position: absolute;
+    display: block;
+    z-index: -1;
 }
