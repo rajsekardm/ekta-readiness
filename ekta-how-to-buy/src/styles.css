@@ -12,10 +12,49 @@
     --border-rounded-md: 1rem;
     --border-rounded-lg: 1.25rem;
     --border-rounded-xl: 1.5rem;
-    --font-size-banner-head: 70px;
-    --line-height-banner-head: 86px;
-    --font-size-banner-content: 30px;
-    --line-height-banner-content: 42px;
+    --border-rounded-sm: .5rem;
+    --bg-metamask-color: #cd6116;
+    --border-metamask-color: #813602;
+    --border-etka-color: #d61f0e;
+    --border-ethereum-color: #1346cb;
+    --border-binance-color: #c38b02;
+    --btn-bg-metamask-color: #933c00;
+    --btn-bg-ekta-color: #cd1200;
+    --btn-bg-binance-color: #b65607;
+    --btn-bg-ethereum-color: #0f37a0;
+    --btn-border-binance-color:#b65607;
+    --btn-border-ekta-color: #cd1200;
+    --btn-border-ethereum-color: #0f37a0;
+    --bg-binance-color: #ffb500;
+    --bg-ethereum-color: #547fef;
+    --secondary-text-color: #4e4c4d;
+    --bg-input-color: #ff786c;
+    --text-input-label: #fdefee;
+    --text-placeholder-color: #ac1506;
+    --text-subcontent-color: #e4e4e4;
+    --text-ethereum-content-color: #d6d6d6;
+    --border-step-color: #fb5b4c;
+}
+@media (min-width:1024px) {
+    :root {
+        --font-size-banner-head: 50px;
+        --line-height-banner-head: 65px;
+        --font-size-banner-content: 22px;
+        --line-height-banner-content: 32px;
+        --font-size-button:18px;
+        --line-height-button: 24px;
+    }
+}
+
+@media (min-width:1600px) {
+    :root {
+        --font-size-banner-head: 70px;
+        --line-height-banner-head: 86px;
+        --font-size-banner-content: 30px;
+        --line-height-banner-content: 42px;
+        --font-size-button:30px;
+        --line-height-button: 36px;
+    }
 }
 
 body {
@@ -33,13 +72,61 @@ body {
     border: 1px solid var(--primary-border-color);
     color: var(--primary-text-color);
 }
-
-
+.btn--metamask {
+    background-color: var(--btn-bg-metamask-color);
+    border: 1px solid var(--border-metamask-color);
+}
+.btn--ekta {
+    background-color: var(--btn-bg-ekta-color);
+    border: 1px solid var(--border-ekta-color);
+}
+.btn--binance {
+    background-color: var(--btn-bg-binance-color);
+    border: 1px solid var(--border-binance-color);
+}
+.btn--ethereum {
+    background-color: var(--btn-bg-ethereum-color);
+    border: 1px solid var(--border-ethereum-color);
+}
+.banner__info {
+    padding: 5rem 0;
+}
 .bg--primary {
     background-color: var(--primary-bg-color);
 }
+.bg--metamask {
+    background-color: var(--bg-metamask-color);
+}
+.bg--ethereum {
+    background-color: var(--bg-ethereum-color)
+}
+.bg--binance {
+    background-color: var(--bg-binance-color);
+}
+.bg--input {
+    background-color: var(--bg-input-color);
+    border: none !important;
+}
+.hr--metamask {
+    background: var(--border-metamask-color) !important;
+}
+.hr--primary {
+    background: var(--border-etka-color) !important;
+}
+.hr--binance {
+    background: var(--border-binance-color) !important;
+}
+.hr--ethereum {
+    background-color: var(--border-ethereum-color);
+}
+.rounded--sm {
+    border-radius: var(--border-rounded-sm);
+}
 .rounded--md {
     border-radius: var(--border-rounded-md);
+}
+.rounded--lg {
+    border-radius: var(--border-rounded-lg);
 }
 .rounded--xl {
     border-radius: var(--border-rounded-xl);
@@ -52,4 +139,38 @@ body {
 .fs__banner-content {
     font-size: var(--font-size-banner-content);
     line-height: var(--line-height-banner-content);
+}
+.fs__btn {
+    font-size: var(--font-size-button);
+    line-height: var(--line-height-button);
+}
+hr:not([size]) {
+    height: 2px !important;
+}
+.b__btn--metamask {
+    border: 1px solid var(--border-metamask-color);
+}
+.b__btn--ekta {
+    border: 1px solid var(--btn-border-ekta-color);
+}
+.b__btn--binance {
+    border: 1px solid var(--btn-border-binance-color);
+}
+.b__btn--ethereum {
+    border: 1px solid var(--btn-border-ethereum-color);
+}
+.text--secondary {
+    color: var(--secondary-text-color);
+}
+.text__input--label {
+    color: var(--text-input-label);
+}
+.text--subcontent {
+    color: var(--text-subcontent-color);
+}
+.text--ethereum {
+    color: var(--text-ethereum-content-color);
+}
+.border--step {
+    border: 1px solid var(--border-step-color);
 }
