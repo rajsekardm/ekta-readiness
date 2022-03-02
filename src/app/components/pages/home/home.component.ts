@@ -26,6 +26,11 @@ export class HomeComponent implements OnInit {
   account: any = {};
   alertSuccess: boolean = true;
   connector: any;
+  ektaMainnet: boolean = false;
+  bscMainnet: boolean = false;
+  ethToken: boolean = false;
+  bscToken: boolean = false;
+  thankyou: boolean = false;
   
   constructor(
     private toastr: ToastrService,
@@ -46,6 +51,9 @@ export class HomeComponent implements OnInit {
       this.accountService.connectionStatus(account);
   }
 
+  formSubmit(){
+    this.thankyou = true;
+  }
   addBscMainnet(){
     window['ethereum'].request({ 
      method: 'wallet_addEthereumChain',
@@ -61,10 +69,13 @@ export class HomeComponent implements OnInit {
      blockExplorerUrls: ['https://bscscan.com/']
      }]
    })
-     .then((receipt) => {
+     .then((success) => {
+      console.log("receipt",success);
        this.toastr.success("Network Added Successfully");
+       this.bscMainnet = true;
      })
      .catch((error) => {
+      console.log("error",error);
        if (error.code === 4001){
          this.toastr.error('User rejected');
        }
@@ -90,10 +101,13 @@ export class HomeComponent implements OnInit {
       blockExplorerUrls: ['https://ektascan.io']
       }]
     })
-    .then((receipt) => {
+    .then((success) => {
+      console.log("receipt",success);
       this.toastr.success("Network Added Successfully");
+      this.ektaMainnet = true;
     })
     .catch((error) => {
+      console.log("error",error);
       if (error.code === 4001){
         this.toastr.error('User rejected');
       }
@@ -150,7 +164,8 @@ export class HomeComponent implements OnInit {
      },
    })
    .then((success) => {
-   })
+    this.bscToken = true;
+  })
    .catch((error) => {
     });
  }
@@ -168,6 +183,7 @@ export class HomeComponent implements OnInit {
      },
    })
    .then((success) => {
+    this.ethToken = true;
    })
    .catch((error) => {
     });

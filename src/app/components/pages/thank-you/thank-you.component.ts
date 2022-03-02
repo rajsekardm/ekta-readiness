@@ -12,4 +12,8 @@ export class ThankYouComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  restart(){
+    window.location.reload();
+
+  }
 }
