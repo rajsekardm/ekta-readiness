@@ -16,11 +16,6 @@ body{
     border: 1px solid #ff5352 !important;
     color: #fff !important;
 }
-.btn:hover{
-    background-color: #ff5352 !important;
-    border: 1px solid #ff5352 !important;
-    color: #fff !important;
-}
 .bg--metamask{
     background-color: #cd6116;
     border-radius: 10px;
@@ -161,9 +156,36 @@ body{
 
 
 @media (min-width:1280px) {
-    .border--step {
-        border: 1px solid var(--border-step-color);
+    
+    .steps--line {
+        border-top: 1px dashed var(--border-steps-dashed-line);
+        border-width: 2px;
+        width: 70%;
     }
+    .step3--line {
+        border-top: 1px dashed var(--border-steps-dashed-line);
+        border-width: 2px;
+        width: 50%;
+    }
+    .step4--line {
+        border-top: 1px dashed var(--border-steps-dashed-line);
+        border-width: 2px;
+        width: 72%;
+    }
+    .step3--line::after {
+        border-right: 1px dashed var(--border-steps-dashed-line);
+        border-width: 2px;
+        content: "";
+        width: 11rem;
+        height: 30rem;
+        position: absolute;
+        display: block;
+        z-index: -1;
+    }
+}
+
+@media (min-width:1400px) {
+    
     .steps--line {
         border-top: 1px dashed var(--border-steps-dashed-line);
         border-width: 2px;
@@ -177,19 +199,20 @@ body{
     .step4--line {
         border-top: 1px dashed var(--border-steps-dashed-line);
         border-width: 2px;
-        width: 78%;
+        width: 76%;
     }
     .step3--line::after {
         border-right: 1px dashed var(--border-steps-dashed-line);
         border-width: 2px;
         content: "";
         width: 15rem;
-        height: 29rem;
+        height: 28.5rem;
         position: absolute;
         display: block;
         z-index: -1;
     }
 }
+
 
 @media (min-width:1600px) {
     :root {
@@ -327,4 +350,7 @@ hr:not([size]) {
 .form-check-input {
     width: 1.25rem !important;
     height: 1.25rem !important;
+}
+.border--step {
+    border: 1px solid var(--border-step-color);
 }
