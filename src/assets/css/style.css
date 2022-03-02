@@ -1,3 +1,98 @@
+body{
+    background-color: #261e21 !important;
+}
+.bg--primary{
+    background-color: #ff5352 !important;
+    border: 1px solid #ff5352 !important;
+    color: #fff !important;
+}
+.bg--primary:hover{
+    background-color: #ff5352 !important;
+    border: 1px solid #ff5352 !important;
+    color: #fff !important;
+}
+.btn{
+    background-color: #ff5352 !important;
+    border: 1px solid #ff5352 !important;
+    color: #fff !important;
+}
+.btn:hover{
+    background-color: #ff5352 !important;
+    border: 1px solid #ff5352 !important;
+    color: #fff !important;
+}
+.bg--metamask{
+    background-color: #cd6116;
+    border-radius: 10px;
+}
+.bg--primary{
+    border-radius: 10px;
+}
+.bg--binance{
+    background-color: #f5b404;
+    border-radius: 10px;
+}
+.bg--ethereum{
+    background-color: #547fef;
+    border-radius: 10px;
+}
+.btn--metamask{
+    background-color: #933c00 !important;
+    border-color: #933c00 !important;
+}
+.b__btn--metamask{
+    border-color: #933c00 !important;
+}
+.btn--ekta{
+    background-color: #cd1e00 !important;
+}
+.b__btn--ekta{
+    border-color: #cd1e00 !important;
+}
+.btn--binance{
+    background-color: #b65608 !important;
+    border-color: #b65608 !important;  
+}
+.b__btn--binance{
+    border-color: #b65608 !important;  
+}
+.btn--ethereum{
+    background-color: #2337a1 !important;
+    border-color: #2337a1 !important;
+}
+.b__btn--ethereum{
+    border-color: #2337a1 !important;
+}
+.btn--metamask:hover{
+    background-color: #933c00 !important;
+    border-color: #933c00 !important;
+}
+.b__btn--metamask:hover{
+    border-color: #933c00 !important;
+}
+.btn--ekta:hover{
+    background-color: #cd1e00 !important;
+}
+.b__btn--ekta:hover{
+    border-color: #cd1e00 !important;
+}
+.btn--binance:hover{
+    background-color: #b65608 !important;
+    border-color: #b65608 !important;  
+}
+.b__btn--binance:hover{
+    border-color: #b65608 !important;  
+}
+.btn--ethereum:hover{
+    background-color: #2337a1 !important;
+    border-color: #2337a1 !important;
+}
+.b__btn--ethereum:hover{
+    border-color: #2337a1 !important;
+}
+
+
+
 /* You can add global styles to this file, and also import other style files */
 @import url(assets/css/roboto-fonts.css);
 @import url(assets/css/lato-fonts.css);
