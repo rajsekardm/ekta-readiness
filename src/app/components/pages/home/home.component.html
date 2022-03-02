@@ -1,124 +1,120 @@
 <app-navbar></app-navbar>
 
 <div class="container">
-    <div class="row align-items-center banner__info">
-      <div class="col-12 col-md-5">
+    <div class="row align-items-center  banner__info">
+      <div class="col-12 col-md-6">
 
         <span class="bg--primary py-2 px-4 text-white l-font--bold fs__btn rounded">
-            How to Buy ?
+            HAVE NFT Readiness Program
         </span>
         <h1 class="text-white mt-4 fs__banner-head l-font--bold">
-            Prepare to buy EKTA
-            token with this Easy
-            Following steps 
+            To buy a HAVE Veteran Bulldog NFT, be prepared to buy $EKTA tokens by following these simple steps.
         </h1>
-        <p class="text-white fs__banner-content py-2">There has never been a moment in history like today,
-            when mankind and our planet are standing at a
-            crossroads. </p>
+        <p class="text-white fs__banner-content py-2">By following these 5 easy steps, you’ll be ready to buy $EKTA tokens to complete your purchase of a HAVE Veteran Bulldog.</p>
 
       </div>
-      <div class="col-12 col-md-7">
+      <div class="col-12 col-md-6">
           <img src="assets/images/tree.png" alt="" width="100%" height="100%">
       </div>
     </div>
 
-    <div id="home__roadmap">
+    <div id="home__roadmap ">
         <div class="container">
-            <div class="row g-5">
-               
-                <div class="col col-sm-6 col-md-4">
+            <div class="row pb-5 mb-5 g-4">
+                <div class="col col-sm-6 col-lg-4">
                     <div class="d-flex align-items-center justify-content-between">   
                         <span class="text-white l-font-bold p-2 px-4 rounded--sm bg--metamask w-25">Step 1</span>
                         <div class="steps--line"></div>
                     </div>
                     
-                    <div class="p-4 rounded--lg bg--metamask my-4">
-                            <div class="roadmap__head d-flex justify-content-between border--metamask">
-                                <!-- <img src="" alt=""> -->
-                                <h4 class="mb-0">Metamask</h4>
+                    <div class="p-4 rounded--lg bg--metamask my-4 mh-80 d-flex justify-content-between flex-column">
+                        <div>
+                            <div class="roadmap__head d-flex justify-content-between align-items-center">
+                                <img src="assets/images/roadmap/metamask.png" alt="ekta">
+                                
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox"  checked value="" id="flexCheckDefault">
                                 </div>
                             </div>
-                            <hr class="hr--metamask ">
+                            <hr class="hr--metamask">
                             <div class="roadmap__content py-2">
                                 <h4 class="text-white l-font-bold">Download Metamask</h4>
-                                <p class="text-white l-font-regular text--subcontent">Add MetaMask wallet to your desktop browser How do
-                                    I install MetaMask on my Chrome browser? 5 Steps to
-                                    follow to complete this process</p>
+                                <p class="l-font-regular text--subcontent">Add MetaMask to your desktop browser. Not sure how? Follow these 5 easy steps to complete the process:</p>
                             </div>
-
-                            <div *ngIf="ethereum == undefined || ethereum == ''" class="d-md-flex justify-content-between gap-4 mb-4">
+    
+                            <div *ngIf="ethereum == undefined || ethereum == ''" class="d-xl-flex justify-content-between gap-4 mb-4">
                                 <button type="button" class="btn bg-transparent w-100 p-2 b__btn--metamask rounded--sm text-white l-font--bold">Show me How</button>
                                 <a href="https://metamask.io/download/" target="_blank" class="btn btn--metamask w-100 p-2 text-white rounded--sm l-font--bold">Download</a>
                             </div>
-                            <div>
-                                <button *ngIf="ethereum != undefined && ethereum != ''" type="button" class="btn btn--metamask w-100 text-white rounded--sm p-2 l-font--bold">I already Have</button>
-                            </div>
+                        </div>
+                       
+                        <div>
+                            <button *ngIf="ethereum != undefined && ethereum != ''" type="button" class="btn btn--metamask w-100 text-white rounded--sm p-2 l-font--bold mt-4 mt-md-0">I already Have</button>
+                        </div>
                     </div>
                 </div>
-                <div class="col col-sm-6 col-md-4">
+                <div class="col col-sm-6 col-lg-4">
                     <div class="d-flex align-items-center justify-content-between">   
-                        <span class="text-white l-font-bold p-2 px-4 rounded--sm bg--metamask w-25">Step 2</span>
+                        <span class="text-white l-font-bold p-2 px-4 rounded--sm bg--primary w-25">Step 2</span>
                         <div class="steps--line"></div>
                     </div>
-                    <div class="p-4 rounded--lg bg--primary my-4">
-                        <div class="roadmap__head d-flex justify-content-between">
-                            <!-- <img src="" alt=""> -->
-                            <h4 class="mb-0">EKTA</h4>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" checked id="flexCheckDefault">
+                    <div class="p-4 rounded--lg bg--primary my-4 mh-80 d-flex justify-content-between flex-column">
+                        <div>
+                            <div class="roadmap__head d-flex justify-content-between">
+                                <img src="assets/images/roadmap/ekta.svg" alt="ekta">
+                              
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" checked id="flexCheckDefault">
+                                </div>
+                            </div>
+                            <hr class="hr--primary">
+                            <div class="roadmap__content py-2">
+                                <h4 class="text-white l-font-bold">Add the EktaChain mainnet to your MetaMask</h4>
+                                <p class="l-font-regular text--subcontent">Add $EKTA v2 to your MetaMask wallet. If haven’t done so already, follow this step-by-step guide:</p>
                             </div>
                         </div>
-                        <hr class="hr--primary">
-                        <div class="roadmap__content py-2">
-                            <h4 class="text-white l-font-bold">Add Ekta mainnet to Metamask</h4>
-                            <p class="text-white l-font-regular text--subcontent">Add EKTA token to your MetaMask wallet Make sure
-                                you’ve added EKTA v2 (BEP20) to your MetaMask wallet.
-                                If you haven’t, here is a step-by-step guide to do so:</p>
-                        </div>
-                        <div class="d-md-flex justify-content-between gap-4">
+                       
+                        <div class="d-xl-flex justify-content-between gap-4">
                             <button type="button" class="btn bg-transparent w-100 b__btn--ekta p-2 rounded--sm text-white l-font--bold">Show me How</button>
-                            <button type="button" class="btn btn--ekta w-100 text-white rounded--sm p-2 l-font--bold" (click)="addEktaMainet()">Add</button>
+                            <button type="button" class="btn btn--ekta w-100 text-white rounded--sm p-2 l-font--bold mt-2 mt-xl-0" (click)="addEktaMainet()">Add</button>
                         </div>
                     </div>
                 </div>
-                <div class="col col-sm-6 col-md-4">
+                <div class="col col-sm-6 col-lg-4">
                     <div class="d-flex align-items-center">   
-                        <span class="text-white l-font-bold p-2 px-4 rounded--sm bg--metamask w-25">Step 3</span>
+                        <span class="text-white l-font-bold p-2 px-4 rounded--sm bg--binance w-25">Step 3</span>
                         <div class="step3--line"></div>
                     </div>
-                    <div class="p-4 rounded--lg bg--binance my-4">
-                        <div class="roadmap__head d-flex justify-content-between">
-                            <!-- <img src="" alt=""> -->
-                            <h4 class="mb-0">Binance</h4>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
+                    <div class="p-4 rounded--lg bg--binance my-4 mh-80 d-flex justify-content-between flex-column">
+                        <div>
+                            <div class="roadmap__head d-flex justify-content-between">
+                                <img src="assets/images/roadmap/binance.svg" alt="ekta">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
+                                </div>
+                            </div>
+                            <hr class="hr--binance">
+                            <div class="roadmap__content py-2">
+                                <h4 class="l-font-bold text--secondary">Add Binance Smart Chain (BSC)</h4>
+                                <p class="l-font-regular text--secondary">Make sure you’re in the Binance Smart Chain (BSC) network when purchasing $EKTA v2 (BEP20). If you need to add BSC to your MetaMask wallet, follow the steps-by-step guide here:</p>
                             </div>
                         </div>
-                        <hr class="hr--binance">
-                        <div class="roadmap__content py-2">
-                            <h4 class="l-font-bold text--secondary">Add Binance Smart Chain (BSC)</h4>
-                            <p class="l-font-regular text--secondary">Make sure you’re in the Binance Smart Chain (BSC)
-                                network when purchasing EKTA v2 (BEP20) tokens.
-                                If you need to add BSC to your MetaMask wallet.</p>
-                        </div>
-                        <div class="d-md-flex justify-content-between gap-4">
+                        
+                        <div class="d-xl-flex justify-content-between gap-4">
                             <button type="button" class="btn bg-transparent w-100 b__btn--binance p-2 rounded--sm text-white l-font--bold">Show me How</button>
-                            <button type="button" class="btn btn--binance w-100 text-white rounded--sm p-2 l-font--bold" (click)="addBscMainnet()">Add</button>
+                            <button type="button" class="btn btn--binance w-100 text-white rounded--sm p-2 l-font--bold mt-2 mt-xl-0" (click)="addBscMainnet()">Add</button>
                         </div>
                     </div>
                 </div>
-                <div class="col col-sm-6 col-md-4">
+                <div class="col col-sm-6 col-lg-4">
                     <div class="d-flex align-items-center justify-content-between">   
-                        <span class="text-white l-font-bold p-2 px-4 rounded--sm bg--metamask w-25">Step 5</span>
+                        <span class="text-white l-font-bold p-2 px-4 rounded--sm bg--primary w-25">Step 5</span>
                         <div class="steps--line"></div>
                     </div>
-                    <div class="p-4 rounded--lg bg--primary my-4">
+                    <div class="p-4 rounded--lg bg--primary my-4 mh-80 d-flex justify-content-between flex-column">
                         <div class="roadmap__content py-2">
-                            <h4 class="text-white l-font-bold">Enter your details with wallet</h4>
-                            <p class="text-white l-font-regular text--subcontent">Email address and Wallet address will be collected and store
-                                in a google sheet for data store purpose</p>
+                            <h4 class="text-white l-font-bold">Submit your details</h4>
+                            <p class="l-font-regular text--subcontent">Email addresses and wallet addresses will be collected and stored for data storage purposes.</p>
                         </div>
                         <div class="roadmap__form" *ngIf="account.address !== ''">
                             <div class="form-floating mb-4">
@@ -131,60 +127,67 @@
                             </div>
                         </div>
                             
-                        <div class="d-md-flex justify-content-between gap-4">
+                        <div class="d-xl-flex justify-content-between gap-4">
                             <button *ngIf="account.address == ''" type="button" class="btn btn--ekta w-100 text-white rounded--sm p-3 l-font--bold connect-btn" (click)="connectWallet()">Connect Wallet</button>
                             <button *ngIf="account.address !== ''" type="button" class="btn btn--ekta w-100 text-white rounded--sm p-3 l-font--bold">Submit Your Form</button>
                         </div>
                     </div>
                 </div>
-                <div class="col col-md-8">
+                <div class="col col-lg-8">
                     <div class="d-flex align-items-center justify-content-start">   
-                        <span class="text-white l-font-bold p-2 px-4 rounded--sm bg--metamask me-4">Step 4</span>
+                        <span class="text-white l-font-bold p-2 px-4 rounded--sm bg--binance  me-4">Step 4</span>
                         <div class="step4--line"></div>
                     </div>
-                    <div class="row p-4 border--step rounded--xl my-4">
-                        <div class="col col-sm-6">
-                            <div class="p-4 rounded--lg bg--ethereum">
-                                <div class="roadmap__head d-flex justify-content-between">
-                                    <!-- <img src="" alt=""> -->
-                                    <h4 class="mb-0">Ethereum</h4>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
+                    <div class="row my-4 mh-80 ms-xl-2">
+                        <div class="d-flex p-lg-4  border--step rounded--xl">
+                            <div class="col col-sm-6 mb-4 mb-md-0 me-4">
+                                <div class="p-4 rounded--lg bg--ethereum mh-100 d-flex justify-content-between flex-column">
+                                    <div>
+                                        <div class="roadmap__head d-flex justify-content-between">
+                                            <img src="assets/images/roadmap/ethereum.svg" alt="ekta">
+                                           
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                        <hr class="hr--ethereum">
+                                        <div class="roadmap__content py-2">
+                                            <h4 class="text-white l-font-bold">Add Ekta ERC20 Token</h4>
+                                            <p class="text--ethereum l-font-regular">Make sure you’re in the Etherum Smart Chain (BSC)
+                                                network when purchasing EKTA v2 (BEP20) tokens.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-xl-flex justify-content-between gap-4">
+                                        <button type="button" class="btn bg-transparent w-100 b__btn--ethereum p-2 rounded--sm text-white l-font--bold">Show me How</button>
+                                        <button type="button" class="btn btn--ethereum w-100 text-white rounded--sm p-2 l-font--bold mt-2 mt-xl-0" (click)="addEthToken()">Add</button>
                                     </div>
                                 </div>
-                                <hr class="hr--ethereum">
-                                <div class="roadmap__content py-2">
-                                    <h4 class="text-white l-font-bold">Add Ekta ERC20 Token</h4>
-                                    <p class="text--ethereum l-font-regular">Make sure you’re in the Etherum Smart Chain (BSC)
-                                        network when purchasing EKTA v2 (BEP20) tokens.</p>
-                                </div>
-                                <div class="d-md-flex justify-content-between gap-4">
-                                    <button type="button" class="btn bg-transparent w-100 b__btn--ethereum p-2 rounded--sm text-white l-font--bold">Show me How</button>
-                                    <button type="button" class="btn btn--ethereum w-100 text-white rounded--sm p-2 l-font--bold" (click)="addEthToken()">Add</button>
+                            </div>
+                            <div class="col col-sm-6 pe-md-0">
+                                <div class="p-4 rounded--lg bg--binance mh-100 me-4 d-flex justify-content-between flex-column">
+                                    <div>
+                                        <div class="roadmap__head d-flex justify-content-between">
+                                            <img src="assets/images/roadmap/binance.svg" alt="ekta">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                        <hr class="hr--binance">
+                                        <div class="roadmap__content py-2">
+                                            <h4 class="l-font-bold text--secondary">Add $EKTA v2 (BEP20)</h4>
+                                            <p class="l-font-regular text--secondary">Make sure you’re in the Binance Smart Chain (BSC) network when purchasing $EKTA v2 (BEP20) tokens.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-xl-flex justify-content-between gap-4">
+                                        <button type="button" class="btn bg-transparent w-100 b__btn--binance p-2 rounded--sm text-white l-font--bold">Show me How</button>
+                                        <button type="button" class="btn btn--binance w-100 text-white rounded--sm p-2 l-font--bold mt-2 mt-xl-0" (click)="addBscToken()">Add</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col col-sm-6">
-                            <div class="p-4 rounded--lg bg--binance">
-                                <div class="roadmap__head d-flex justify-content-between">
-                                    <!-- <img src="" alt=""> -->
-                                    <h4 class="mb-0">Binance</h4>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
-                                    </div>
-                                </div>
-                                <hr class="hr--binance">
-                                <div class="roadmap__content py-2">
-                                    <h4 class="l-font-bold text--secondary">Add Ekta BEP20 Token</h4>
-                                    <p class="l-font-regular text--secondary">Make sure you’re in the Binance Smart Chain (BSC)
-                                        network when purchasing EKTA v2 (BEP20) tokens.</p>
-                                </div>
-                                <div class="d-md-flex justify-content-between gap-4">
-                                    <button type="button" class="btn bg-transparent w-100 b__btn--binance p-2 rounded--sm text-white l-font--bold">Show me How</button>
-                                    <button type="button" class="btn btn--binance w-100 text-white rounded--sm p-2 l-font--bold" (click)="addBscToken()">Add</button>
-                                </div>
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
             </div>

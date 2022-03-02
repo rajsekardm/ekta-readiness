@@ -36,6 +36,16 @@
     --text-ethereum-content-color: #d6d6d6;
     --border-step-color: #fb5b4c;
 }
+@media (max-width:1024px) {
+    :root {
+        --font-size-banner-head: 30px;
+        --line-height-banner-head: 45px;
+        --font-size-banner-content: 22px;
+        --line-height-banner-content: 32px;
+        --font-size-button:18px;
+        --line-height-button: 24px;
+    }
+}
 @media (min-width:1024px) {
     :root {
         --font-size-banner-head: 50px;
@@ -44,6 +54,36 @@
         --line-height-banner-content: 32px;
         --font-size-button:18px;
         --line-height-button: 24px;
+    }
+}
+@media (min-width:1280px) {
+    .border--step {
+        border: 1px solid var(--border-step-color);
+    }
+    .steps--line {
+        border-top: 1px dashed var(--border-steps-dashed-line);
+        border-width: 2px;
+        width: 70%;
+    }
+    .step3--line {
+        border-top: 1px dashed var(--border-steps-dashed-line);
+        border-width: 2px;
+        width: 57%;
+    }
+    .step4--line {
+        border-top: 1px dashed var(--border-steps-dashed-line);
+        border-width: 2px;
+        width: 76%;
+    }
+    .step3--line::after {
+        border-right: 1px dashed var(--border-steps-dashed-line);
+        border-width: 2px;
+        content: "";
+        width: 15rem;
+        height: 29rem;
+        position: absolute;
+        display: block;
+        z-index: -1;
     }
 }
 
@@ -171,32 +211,4 @@ hr:not([size]) {
 }
 .text--ethereum {
     color: var(--text-ethereum-content-color);
-}
-.border--step {
-    border: 1px solid var(--border-step-color);
-}
-.steps--line {
-    border-top: 1px dashed var(--border-steps-dashed-line);
-    border-width: 2px;
-    width: 70%;
-}
-.step3--line {
-    border-top: 1px dashed var(--border-steps-dashed-line);
-    border-width: 2px;
-    width: 40%;
-}
-.step4--line {
-    border-top: 1px dashed var(--border-steps-dashed-line);
-    border-width: 2px;
-    width: 70%;
-}
-.step3--line::after {
-    border-right: 1px dashed var(--border-steps-dashed-line);
-    border-width: 2px;
-    content: "";
-    width: 10em;
-    height: 32em;
-    position: absolute;
-    display: block;
-    z-index: -1;
 }

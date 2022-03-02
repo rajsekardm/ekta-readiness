@@ -131,6 +131,20 @@ body{
     --text-ethereum-content-color: #d6d6d6;
     --border-step-color: #fb5b4c;
 }
+
+@media (max-width:1024px) {
+    :root {
+        --font-size-banner-head: 24px;
+        --line-height-banner-head: 35px;
+        --font-size-banner-content: 16px;
+        --line-height-banner-content: 22px;
+        --font-size-button:16px;
+        --line-height-button: 20px;
+    }
+    .banner__info {
+        padding: 5rem 1rem;
+    }
+}
 @media (min-width:1024px) {
     :root {
         --font-size-banner-head: 50px;
@@ -139,6 +153,41 @@ body{
         --line-height-banner-content: 32px;
         --font-size-button:18px;
         --line-height-button: 24px;
+    }
+    .banner__info {
+        padding: 5rem 1rem;
+    }
+}
+
+
+@media (min-width:1280px) {
+    .border--step {
+        border: 1px solid var(--border-step-color);
+    }
+    .steps--line {
+        border-top: 1px dashed var(--border-steps-dashed-line);
+        border-width: 2px;
+        width: 70%;
+    }
+    .step3--line {
+        border-top: 1px dashed var(--border-steps-dashed-line);
+        border-width: 2px;
+        width: 57%;
+    }
+    .step4--line {
+        border-top: 1px dashed var(--border-steps-dashed-line);
+        border-width: 2px;
+        width: 78%;
+    }
+    .step3--line::after {
+        border-right: 1px dashed var(--border-steps-dashed-line);
+        border-width: 2px;
+        content: "";
+        width: 15rem;
+        height: 29rem;
+        position: absolute;
+        display: block;
+        z-index: -1;
     }
 }
 
@@ -150,6 +199,8 @@ body{
         --line-height-banner-content: 42px;
         --font-size-button:30px;
         --line-height-button: 36px;
+        --font-size-roadmap-card-head: 26px;
+        --line-height-roadmap-card-head: 32px;
     }
 }
 
@@ -184,9 +235,7 @@ body {
     background-color: var(--btn-bg-ethereum-color);
     border: 1px solid var(--border-ethereum-color);
 }
-.banner__info {
-    padding: 5rem 0;
-}
+
 .bg--primary {
     background-color: var(--primary-bg-color);
 }
@@ -267,31 +316,15 @@ hr:not([size]) {
 .text--ethereum {
     color: var(--text-ethereum-content-color);
 }
-.border--step {
-    border: 1px solid var(--border-step-color);
+
+.mh-80 {
+    min-height: 80%;
 }
-.steps--line {
-    border-top: 1px dashed var(--border-steps-dashed-line);
-    border-width: 2px;
-    width: 70%;
+
+.mh-100 {
+    min-height: 100%;
 }
-.step3--line {
-    border-top: 1px dashed var(--border-steps-dashed-line);
-    border-width: 2px;
-    width: 40%;
-}
-.step4--line {
-    border-top: 1px dashed var(--border-steps-dashed-line);
-    border-width: 2px;
-    width: 70%;
-}
-.step3--line::after {
-    border-right: 1px dashed var(--border-steps-dashed-line);
-    border-width: 2px;
-    content: "";
-    width: 10em;
-    height: 32em;
-    position: absolute;
-    display: block;
-    z-index: -1;
+.form-check-input {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
 }
