@@ -52,7 +52,14 @@ export class HomeComponent implements OnInit {
   }
 
   formSubmit(){
-    this.thankyou = true;
+    let walletAddress = (<HTMLInputElement>document.getElementById('walletAddress')).value;
+    let email = (<HTMLInputElement>document.getElementById('email')).value;
+    if(email == ''){
+      this.toastr.error("Email is required");
+    }
+    else{
+      this.thankyou = true;
+    }
   }
   addBscMainnet(){
     window['ethereum'].request({ 
@@ -91,10 +98,10 @@ export class HomeComponent implements OnInit {
       method: 'wallet_addEthereumChain',
       params: [{
       chainId: '0x7ca',
-      chainName: 'Ekta',
+      chainName: 'EktaChain',
       nativeCurrency: {
-          name: 'Ekta',
-          symbol: 'Ekta',
+          name: 'EktaChain',
+          symbol: 'EKTA',
           decimals: 18
       },
       rpcUrls: ['https://main.ekta.io'],
@@ -157,7 +164,7 @@ export class HomeComponent implements OnInit {
        type: 'ERC20',
        options: {
          address: '0x45808ce43eb2d7685ff0242631f0feb6f3d8701a',
-         symbol: 'BNB',
+         symbol: 'EKTAv2',
          decimals: 18,
          image: 'https://bscscan.com/token/images/ektaworld_32.png',
        },
@@ -176,7 +183,7 @@ export class HomeComponent implements OnInit {
        type: 'ERC20',
        options: {
          address: '0x2f75113b13D136F861d212Fa9b572F2C79Ac81C4',
-         symbol: 'ETH',
+         symbol: 'EKTA',
          decimals: 18,
          image: 'https://etherscan.io/token/images/ektav2_32.png',
        },
