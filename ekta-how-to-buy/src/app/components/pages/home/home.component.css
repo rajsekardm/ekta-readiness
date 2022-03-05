@@ -16,3 +16,17 @@
 ::placeholder {
     color: var(--text-placeholder-color);
 }
+a {
+    color: unset !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #fff !important;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    /* padding: 0 !important; */
+}
+.btn-check:focus+.btn, .btn:focus {
+    box-shadow: none !important;
+}
