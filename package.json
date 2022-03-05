@@ -33,6 +33,9 @@
     "web3modal": "^1.9.4",
     "zone.js": "~0.10.2"
   },
+  "scripts": {
+    "postinstall": "node patch.js"
+    },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.4",
     "@angular/cli": "~9.1.4",
