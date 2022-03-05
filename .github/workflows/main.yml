@@ -29,7 +29,8 @@ jobs:
       - run: npm cache clean --force
       - run: npm install -g @angular/cli@9.1.13
       - run: npm ls -g --depth=0
-      - run: npm ci
+
+      - run: ng update
       - run: ng build --prod
 
       - name: copy file via ssh key
