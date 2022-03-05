@@ -9,6 +9,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 import { ThankYouComponent } from './components/pages/thank-you/thank-you.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { ThankYouComponent } from './components/pages/thank-you/thank-you.compon
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule addeds
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
