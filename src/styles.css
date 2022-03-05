@@ -75,7 +75,7 @@
         border-width: 2px;
         width: 76%;
     }
-    .step3--line::after {
+    /* .step3--line::after {
         border-right: 1px dashed var(--border-steps-dashed-line);
         border-width: 2px;
         content: "";
@@ -84,7 +84,7 @@
         position: absolute;
         display: block;
         z-index: -1;
-    }
+    } */
 }
 
 @media (min-width:1600px) {

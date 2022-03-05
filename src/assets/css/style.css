@@ -157,11 +157,12 @@ body{
 
 @media (min-width:1280px) {
     
-    .steps--line {
+    /* .steps--line {
         border-top: 1px dashed var(--border-steps-dashed-line);
         border-width: 2px;
         width: 70%;
     }
+    
     .step3--line {
         border-top: 1px dashed var(--border-steps-dashed-line);
         border-width: 2px;
@@ -170,10 +171,23 @@ body{
     .step4--line {
         border-top: 1px dashed var(--border-steps-dashed-line);
         border-width: 2px;
-        width: 72%;
+        width: 82%;
     }
-    .step3--line::after {
-        border-right: 1px dashed var(--border-steps-dashed-line);
+    .step5--line {
+        border-top: 1px dashed var(--border-steps-dashed-line);
+        border-width: 2px;
+        width: 86% !important;
+        margin-left: 4rem;
+    }
+    .step5--line::after {
+        content: '';
+        border-left: 1px dashed var(--border-steps-dashed-line);
+        border-width: 2px;
+        height: 2.25rem;
+        position: absolute;
+    } */
+    /* .step5--line::before {
+        border-left: 1px dashed var(--border-steps-dashed-line);
         border-width: 2px;
         content: "";
         width: 11rem;
@@ -181,36 +195,47 @@ body{
         position: absolute;
         display: block;
         z-index: -1;
-    }
+    } */
+    /* .step3--line::after {
+        border-right: 1px dashed var(--border-steps-dashed-line);
+        border-width: 2px;
+        content: "";
+        width: 11rem;
+        height: 29rem;
+        position: absolute;
+        display: block;
+        z-index: -1;
+    } */
 }
 
 @media (min-width:1400px) {
     
-    .steps--line {
+    /* .steps--line {
         border-top: 1px dashed var(--border-steps-dashed-line);
         border-width: 2px;
         width: 70%;
     }
+    
     .step3--line {
         border-top: 1px dashed var(--border-steps-dashed-line);
         border-width: 2px;
-        width: 57%;
+        width: 50%;
     }
     .step4--line {
         border-top: 1px dashed var(--border-steps-dashed-line);
         border-width: 2px;
-        width: 79%;
+        width: 85%;
     }
     .step3--line::after {
         border-right: 1px dashed var(--border-steps-dashed-line);
         border-width: 2px;
         content: "";
-        width: 15rem;
-        height: 28.5rem;
+        width: 13rem;
+        height: 27rem;
         position: absolute;
         display: block;
         z-index: -1;
-    }
+    } */
 }
 
 
