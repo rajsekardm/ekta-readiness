@@ -80,4 +80,9 @@ export class AccountService {
     console.log("check details",details);
     return this.http.post(`${apiUrl}/api/v1/add-user/`,details); 
   }
+
+  saveWalletAddress(details){
+
+    return this.http.post(`http://54.180.8.45:3000/api/v1/add-wallet-address-to-sheet/`,details); 
+  }
 }

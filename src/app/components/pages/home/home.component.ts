@@ -6,6 +6,7 @@ import WalletConnect from "@walletconnect/client";
 import QRCodeModal from "@walletconnect/qrcode-modal";
 import { AccountService } from 'src/app/services/account.service';
 import { StorageService } from 'src/app/services/storage.service';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 // Set web3 and connector
 let web3 = new Web3(window['ethereum']);
@@ -22,6 +23,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('uiWallet') uiWallet;
   @ViewChild('addNetwork') addNetwork;
   @ViewChild('addToken') addToken;
+  public registerForm: FormGroup;
   ethereum: any;
   account: any = {};
   alertSuccess: boolean = true;
@@ -31,11 +33,13 @@ export class HomeComponent implements OnInit {
   ethToken: boolean = false;
   bscToken: boolean = false;
   thankyou: boolean = false;
+  submitted:Boolean = false;
   
   constructor(
     private toastr: ToastrService,
     private accountService: AccountService,
-    private storageService: StorageService
+    private storageService: StorageService,
+    private formBuilder:FormBuilder
   ) { }
 
   ngOnInit(): void {
@@ -44,12 +48,45 @@ export class HomeComponent implements OnInit {
     this.accountService.accountObserve.subscribe(response => {
       this.account = response;
     });
+
+    this.registerForm = this.formBuilder.group({
+      email:['', [Validators.required, Validators.email]],
+      walletAddress:['', [Validators.required]]
+    });
+    setTimeout(()=> 
+      this.registerForm.patchValue({
+        walletAddress:this.account.address
+      }),
+    1000)
+    
   }
 
   connectWallet(){
       let account = { status: true };
       this.accountService.connectionStatus(account);
   }
+  registerProcess(registerForm:any):void{
+    console.log("testtt");
+    this.submitted = true;
+    if(this.registerForm.invalid) {
+      return;
+    }
+    let details = {
+      "walletAddress":registerForm.value.walletAddress,
+      "email":registerForm.value.email
+    }
+    var formData: any = new FormData();
+    formData.append("walletAddress", this.registerForm.get('walletAddress').value);
+    formData.append("email", this.registerForm.get('email').value);
+
+    this.accountService.saveWalletAddress(details).subscribe( response => {
+      this.toastr.success(response['message']);
+      this.thankyou = true;
+    })
+
+  }
+
+  get formGet () { return this.registerForm.controls; }
 
   formSubmit(){
     let walletAddress = (<HTMLInputElement>document.getElementById('walletAddress')).value;
@@ -58,7 +95,15 @@ export class HomeComponent implements OnInit {
       this.toastr.error("Email is required");
     }
     else{
-      this.thankyou = true;
+      let details = {
+        "walletAddress":walletAddress,
+        "email":email
+      }
+      this.accountService.saveWalletAddress(details).subscribe( response => {
+        console.log("response",response);
+        this.thankyou = true;
+      })
+      
     }
   }
   addBscMainnet(){
