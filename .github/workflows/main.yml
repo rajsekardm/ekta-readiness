@@ -24,10 +24,12 @@ jobs:
             ${{ runner.os }}-node-
       - run: npm cache clean --force
       - run: npm install
+      - run: npm ci
       - run: npm audit fix --force --production
       - run: npm cache clean --force
       - run: npm install -g @angular/cli@9.1.13
       - run: npm ls -g --depth=0
+      - run: npm ci
       - run: ng build --prod
 
       - name: copy file via ssh key
