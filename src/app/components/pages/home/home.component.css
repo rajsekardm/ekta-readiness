@@ -37,3 +37,6 @@
 .bg--binance{
     width: auto !important;
 }
+.object-contain {
+    object-fit: contain;
+}

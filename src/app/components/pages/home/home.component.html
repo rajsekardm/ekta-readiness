@@ -5,10 +5,10 @@
       <div class="col-12 col-md-6">
 
         <span class="bg--primary py-2 px-4 text-white l-font--bold fs__btn rounded">
-            HAVE NFT Readiness Program
+            HAVE NFT OPERATION READINESS
         </span>
         <h1 class="text-white mt-4 fs__banner-head l-font--bold">
-            To buy a HAVE Veteran Bulldog NFT, be prepared to buy $EKTA tokens by following these simple steps.
+            PREPARE TO BUY YOUR VETERAN BULLDOG NFT
         </h1>
         <p class="text-white fs__banner-content py-2">By following these 5 easy steps, you’ll be ready to buy $EKTA tokens to complete your purchase of a HAVE Veteran Bulldog.</p>
 
@@ -32,7 +32,7 @@
                     <div class="p-4 rounded--lg bg--metamask my-4 mh-80 d-flex justify-content-between flex-column">
                         <div>
                             <div class="roadmap__head d-flex justify-content-between align-items-center">
-                                <img src="assets/images/roadmap/metamask.png" width="150" alt="ekta">
+                                <img src="assets/images/roadmap/metamask.png" class="object-contain" width="150" height="50" alt="ekta">
                                 
                                 <div class="form-check">
                                     <input *ngIf="ethereum != undefined && ethereum != ''"  class="form-check-input" type="checkbox"  checked value="" id="flexCheckDefault">
@@ -41,18 +41,21 @@
                             </div>
                             <hr class="hr--metamask">
                             <div class="roadmap__content py-2">
-                                <h4 class="text-white l-font-bold">Download Metamask</h4>
-                                <p class="l-font-regular text--subcontent">Add MetaMask to your desktop browser. Not sure how? Follow these 5 easy steps to complete the process:</p>
+                                <h4 class="text-white l-font-bold">Download MetaMask</h4>
+                                <p class="l-font-regular text--subcontent">Add MetaMask to your desktop browser. Not sure how? Follow these 5 easy steps to complete the process.</p>
                             </div>
     
                           
                         </div>
                        
                         <div>
-                            <button *ngIf="ethereum != undefined && ethereum != ''" type="button" class="btn btn--metamask w-100 text-white rounded--sm p-2 l-font--bold mt-4 mt-md-0">I already Have</button>
+                            <button *ngIf="ethereum != undefined && ethereum != ''" type="button" class="btn btn--metamask w-100 text-white rounded--sm p-2 l-font--bold mt-4 mt-md-0">MetaMask already installed
+                            </button>
                             <div class="d-xl-flex justify-content-between gap-3" *ngIf="ethereum == undefined || ethereum == ''">
-                                <button type="button" class="btn bg-transparent w-100 p-2 b__btn--metamask rounded--sm text-white l-font--bold">Show me How</button>
-                                <a href="https://metamask.io/download/" target="_blank" class="btn btn--metamask w-100 p-2 text-white rounded--sm l-font--bold">Download</a>
+                                <a href="https://docs.google.com/document/d/100qK4uJrp0EItdJQWudFVzpwKLa30yUdvMwK2evSVs0/edit" class="btn bg-transparent w-100 p-2 b__btn--metamask rounded--sm text-white l-font--bold" target="_blank">
+                 Show me how
+                            </a>
+                                <a href="https://resources.ekta.io/how-to-start-a-metamask-wa/" target="_blank" class="btn btn--metamask w-100 p-2 text-white rounded--sm l-font--bold mt-2 mt-xl-0">Download</a>
                             </div>
                         </div>
                     </div>
@@ -65,7 +68,7 @@
                     <div class="p-4 rounded--lg bg--primary my-4 mh-80 d-flex justify-content-between flex-column">
                         <div>
                             <div class="roadmap__head d-flex justify-content-between align-items-center">
-                                <img src="assets/images/roadmap/ekta.svg" width="100" alt="ekta">
+                                <img src="assets/images/roadmap/ekta-white.svg" width="150" height="50" alt="ekta">
                               
                                 <div class="form-check">
                                     <input *ngIf="!ektaMainnet" class="form-check-input" type="checkbox" disabled value=""  id="flexCheckDefault">
@@ -75,12 +78,13 @@
                             <hr class="hr--primary">
                             <div class="roadmap__content py-2">
                                 <h4 class="text-white l-font-bold">Add the EktaChain mainnet to your MetaMask</h4>
-                                <p class="l-font-regular text--subcontent">Add $EKTA v2 to your MetaMask wallet. If haven’t done so already, follow this step-by-step guide:</p>
+                                <p class="l-font-regular text--subcontent"> If you haven’t already done so, click “Add” to automatically add it, or follow the guide by clicking “Show me how”.
+                                </p>
                             </div>
                         </div>
                        
                         <div class="d-xl-flex justify-content-between gap-3">
-                            <a href="https://resources.ekta.io/ektachain-network-how-to-add-to-metamask-wallet/" target="_blank" class="btn bg-transparent w-100 b__btn--ekta p-2 rounded--sm text-white l-font--bold">Show me How</a>
+                            <a href="https://resources.ekta.io/ektachain-network-how-to-add-to-metamask-wallet/" target="_blank" class="btn bg-transparent w-100 b__btn--ekta p-2 rounded--sm text-white l-font--bold">Show me how</a>
                            
                                 <button type="button" class="btn btn--ekta w-100 text-white rounded--sm p-2 l-font--bold mt-2 mt-xl-0" (click)="addEktaMainet()">Add</button>
                            
@@ -95,7 +99,7 @@
                     <div class="p-4 rounded--lg bg--binance my-4 mh-80 d-flex justify-content-between flex-column">
                         <div>
                             <div class="roadmap__head d-flex justify-content-between align-items-center">
-                                <img src="assets/images/roadmap/binance.svg" width="150" alt="ekta">
+                                <img src="assets/images/roadmap/binance.svg" width="150" height="50" alt="ekta">
                                 <div class="form-check">
                                     <input *ngIf="!bscMainnet" class="form-check-input" type="checkbox" disabled value="" id="flexCheckDefault">
                                     <input *ngIf="bscMainnet" class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
@@ -104,12 +108,13 @@
                             <hr class="hr--binance">
                             <div class="roadmap__content py-2">
                                 <h4 class="l-font-bold text--secondary">Add Binance Smart Chain (BSC)</h4>
-                                <p class="l-font-regular text--secondary">Make sure you’re in the Binance Smart Chain (BSC) network when purchasing $EKTA v2 (BEP20). If you need to add BSC to your MetaMask wallet, follow the steps-by-step guide here:</p>
+                                <p class="l-font-regular text--secondary">Make sure you’re in the Binance Smart Chain (BSC) network when purchasing $EKTA v2 (BEP20). If you need to add BSC network to your MetaMask wallet, click “Add” to automatically add it, or follow the guide by clicking “Show me how”.
+                                </p>
                             </div>
                         </div>
                         
                         <div class="d-xl-flex justify-content-between gap-3">
-                            <a href="https://resources.ekta.io/how-to-add-bsc-to-your-metamask/" target="_blank" class="btn bg-transparent w-100 b__btn--binance p-2 rounded--sm text-white l-font--bold">Show me How</a>
+                            <a href="https://resources.ekta.io/how-to-add-bsc-to-your-metamask/" target="_blank" class="btn bg-transparent w-100 b__btn--binance p-2 rounded--sm text-white l-font--bold">Show me how</a>
                            
                                 <button type="button" class="btn btn--binance w-100 text-white rounded--sm p-2 l-font--bold mt-2 mt-xl-0" (click)="addBscMainnet()">Add</button>
                            
@@ -124,13 +129,13 @@
                             <span class="text-white l-font-bold p-2 px-4 rounded--sm bg--binance  me-4">Step 4</span>
                             <div class="step4--line"></div>
                         </div>
-                        <div class="row my-4 mh-80 ms-xl-2">
-                            <div class="d-md-flex p-4 border--step rounded--xl">
+                        <div class="row mt-4 pt-1 mh-80 ms-xl-2">
+                            <div class="d-md-flex p-3 border--step rounded--xl">
                                 <div class="col-12 col-md-6 mb-4 mb-md-0 me-md-4">
                                     <div class="p-4 rounded--lg bg--ethereum mh-100 d-flex justify-content-between flex-column">
                                         <div>
                                             <div class="roadmap__head d-flex justify-content-between align-items-center">
-                                                <img src="assets/images/roadmap/ethereum.svg" width="150" alt="ekta">
+                                                <img src="assets/images/roadmap/ethereum.svg" width="150" height="50" alt="ekta">
                                                
                                                 <div class="form-check">
                                                     <input *ngIf="!ethToken" class="form-check-input" type="checkbox" disabled value="" id="flexCheckDefault">
@@ -139,14 +144,13 @@
                                             </div>
                                             <hr class="hr--ethereum">
                                             <div class="roadmap__content py-2">
-                                                <h4 class="text-white l-font-bold">Add Ekta ERC20 Token</h4>
-                                                <p class="text--ethereum l-font-regular">Make sure you’re in the Etherum Smart Chain (BSC)
-                                                    network when purchasing EKTA v2 (BEP20) tokens.</p>
+                                                <h4 class="text-white l-font-bold">Add $EKTA v2 (ERC20) Token</h4>
+                                                <p class="text--ethereum l-font-regular">Make sure you're in the Ethereum Network when purchasing $EKTA v2 (ERC20) tokens. Then, click “Add” to automatically add it, or follow the guide by clicking “Show me how”.</p>
                                             </div>
                                         </div>
                                         
                                         <div class="d-xl-flex justify-content-between gap-3">
-                                            <a href="https://resources.ekta.io/add-usdekta-erc20-token-to-your-metamask-wallet/" target="_blank" class="btn bg-transparent w-100 b__btn--ethereum p-2 rounded--sm text-white l-font--bold">Show me How</a>
+                                            <a href="https://resources.ekta.io/add-usdekta-erc20-token-to-your-metamask-wallet/" target="_blank" class="btn bg-transparent w-100 b__btn--ethereum p-2 rounded--sm text-white l-font--bold">Show me how</a>
                                            
                                                 <button type="button" class="btn btn--ethereum w-100 text-white rounded--sm p-2 l-font--bold mt-2 mt-xl-0" (click)="addEthToken()">Add</button>
                                           
@@ -157,7 +161,7 @@
                                     <div class="p-4 rounded--lg bg--binance mh-100 me-md-4 d-flex justify-content-between flex-column">
                                         <div>
                                             <div class="roadmap__head d-flex justify-content-between align-items-center">
-                                                <img src="assets/images/roadmap/binance.svg" width="150" alt="ekta">
+                                                <img src="assets/images/roadmap/binance.svg" width="150" height="50" alt="ekta">
                                                 <div class="form-check">
                                                     <input *ngIf="!bscToken" class="form-check-input" type="checkbox" disabled value="" id="flexCheckDefault">
                                                     <input *ngIf="bscToken" class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
@@ -165,13 +169,13 @@
                                             </div>
                                             <hr class="hr--binance">
                                             <div class="roadmap__content py-2">
-                                                <h4 class="l-font-bold text--secondary">Add $EKTA v2 (BEP20)</h4>
-                                                <p class="l-font-regular text--secondary">Make sure you’re in the Binance Smart Chain (BSC) network when purchasing $EKTA v2 (BEP20) tokens.</p>
+                                                <h4 class="l-font-bold text--secondary">Add $EKTA v2 (BEP20) Token</h4>
+                                                <p class="l-font-regular text--secondary">Make sure you’re in the Binance Smart Chain (BSC) network when purchasing $EKTA v2 (BEP20) tokens. Then, click “Add” to automatically add it, or follow the guide by clicking “Show me how”.</p>
                                             </div>
                                         </div>
                                         
                                         <div class="d-xl-flex justify-content-between gap-3">
-                                            <a href="https://resources.ekta.io/add-ekta-token-to-your-metamask-wallet/" target="_blank" class="btn bg-transparent w-100 b__btn--binance p-2 rounded--sm text-white l-font--bold">Show me How</a>
+                                            <a href="https://resources.ekta.io/add-ekta-token-to-your-metamask-wallet/" target="_blank" class="btn bg-transparent w-100 b__btn--binance p-2 rounded--sm text-white l-font--bold">Show me how</a>
                                           
                                                 <button type="button" class="btn btn--binance w-100 text-white rounded--sm p-2 l-font--bold mt-2 mt-xl-0" (click)="addBscToken()">Add</button>
                                          
@@ -187,10 +191,11 @@
                             <span class="text-white l-font-bold p-2 px-4 rounded--sm bg--primary w-25">Step 5</span>
                             <!-- <div class="steps--line"></div> -->
                         </div>
-                        <div class="p-4 rounded--lg bg--primary my-4 mh-80 d-flex justify-content-between flex-column">
+                        <div class="p-4 rounded--lg bg--primary mt-4 mb-3 mh-80 d-flex justify-content-between flex-column">
                             <div class="roadmap__content py-2">
                                 <h4 class="text-white l-font-bold">Submit your details</h4>
-                                <p class="l-font-regular text--subcontent">Email addresses and wallet addresses will be collected and stored for data storage purposes.</p>
+                                <p class="l-font-regular text--subcontent">Please share your email and wallet addresses so we can confirm that you’re whitelisted to buy a Veteran Bulldog NFT.
+                                </p>
                             </div>
                             <div class="roadmap__form">
                                 <div class="form-floating mb-4">
@@ -206,7 +211,7 @@
                                 
                             <div class="d-xl-flex justify-content-between gap-3">
                                 <button *ngIf="account.address == ''" type="button" class="btn btn--ekta w-100 text-white rounded--sm p-3 l-font--bold connect-btn" (click)="connectWallet()">Connect Wallet</button>
-                                <button *ngIf="account.address !== ''" type="button" class="btn btn--ekta w-100 text-white rounded--sm p-3 l-font--bold" (click)="formSubmit()">Submit Your Form</button>
+                                <button *ngIf="account.address !== ''" type="button" class="btn btn--ekta w-100 text-white rounded--sm p-3 l-font--bold" (click)="formSubmit()">Submit</button>
                             </div>
                         </div>
                     </div>

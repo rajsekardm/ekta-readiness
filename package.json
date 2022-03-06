@@ -2,13 +2,9 @@
   "name": "version9",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
+    "postinstall": "node patch.js",
     "build": "ng build",
-    "build-prod": "ng build --prod=true",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "build-prod": "ng build --prod=true"
   },
   "private": true,
   "dependencies": {
@@ -33,9 +29,6 @@
     "web3modal": "^1.9.4",
     "zone.js": "~0.10.2"
   },
-  "scripts": {
-    "postinstall": "node patch.js"
-    },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.4",
     "@angular/cli": "~9.1.4",
