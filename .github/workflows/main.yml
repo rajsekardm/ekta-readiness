@@ -24,18 +24,16 @@ jobs:
             ${{ runner.os }}-node-
       - run: npm cache clean --force
       - run: npm install
-      - run: npm ci
+      - run: npm audit fix
       - run: npm audit fix --force --production
+      - run: npm install -g @angular/cli@9.1.15
       - run: npm cache clean --force
-      - run: npm install -g @angular/cli@9.1.13
-      - run: npm ls -g --depth=0
-
-      - run: npm run build --prod
+      - run: ng build --prod
 
       - name: copy file via ssh key
         uses: appleboy/scp-action@master
         env:
-          HOST:  54.180.56.85
+          HOST: 54.180.56.85
           USERNAME: ubuntu
           PORT:  22
           KEY: ${{ secrets.SSH_PRIVATE_KEY }}
