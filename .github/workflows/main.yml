@@ -38,6 +38,6 @@ jobs:
           PORT:  22
           KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         with:
-          source: "./dist"
+          source: "./dist/version9"
           target: "/var/www/html/"
           strip_components: 2  
