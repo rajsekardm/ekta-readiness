@@ -26,7 +26,7 @@ jobs:
       - run: npm install
       - run: npm audit fix
       - run: npm audit fix --force --production
-      - run: npm install -g @angular/cli > /dev/null
+      - run: npm install -g @angular/cli@9.1.15
       - run: npm cache clean --force
       - run: ng build --prod
 
