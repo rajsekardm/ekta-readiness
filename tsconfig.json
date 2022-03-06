@@ -17,15 +17,4 @@
     ],
     "resolveJsonModule": true,
   },
-    
-    "compilerOptions":{
- [...]
- "paths": {
-      "@angular/*": ["./node_modules/@angular/*"]
-    }
-
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
-  }
 }

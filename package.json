@@ -2,13 +2,7 @@
   "name": "version9",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "build-prod": "ng build --prod=true",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "postinstall": "node patch.js"
   },
   "private": true,
   "dependencies": {
@@ -24,7 +18,7 @@
     "@sweetalert2/ngx-sweetalert2": "^10.0.0",
     "@walletconnect/web3-provider": "^1.6.5",
     "ngx-bootstrap": "^8.0.0",
-    "ngx-toastr": "^14.1.0",
+    "ngx-toastr": "^9.1.0",
     "rxjs": "~6.5.4",
     "sweetalert2": "^11.1.4",
     "tslib": "^1.10.0",
@@ -33,9 +27,6 @@
     "web3modal": "^1.9.4",
     "zone.js": "~0.10.2"
   },
-  "scripts": {
-    "postinstall": "node patch.js"
-    },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.4",
     "@angular/cli": "~9.1.4",
