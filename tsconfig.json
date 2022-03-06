@@ -20,11 +20,7 @@
     
     "compilerOptions":{
  
- "paths": {
-      "@angular/*": ["./node_modules/@angular/*"]
-    }
-
-  "angularCompilerOptions": {
+   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
   }
