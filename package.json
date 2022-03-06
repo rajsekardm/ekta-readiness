@@ -24,7 +24,7 @@
     "@sweetalert2/ngx-sweetalert2": "^10.0.0",
     "@walletconnect/web3-provider": "^1.6.5",
     "ngx-bootstrap": "^8.0.0",
-    "ngx-toastr": "^14.1.0",
+    "ngx-toastr": "^9.1.0",
     "rxjs": "~6.5.4",
     "sweetalert2": "^11.1.4",
     "tslib": "^1.10.0",
