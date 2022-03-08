@@ -65,8 +65,10 @@ export class HomeComponent implements OnInit {
       let account = { status: true };
       this.accountService.connectionStatus(account);
   }
+  
+  get formGet () { return this.registerForm.controls; }
+
   registerProcess(registerForm:any):void{
-    console.log("testtt");
     this.submitted = true;
     if(this.registerForm.invalid) {
       return;
@@ -86,26 +88,6 @@ export class HomeComponent implements OnInit {
 
   }
 
-  get formGet () { return this.registerForm.controls; }
-
-  formSubmit(){
-    let walletAddress = (<HTMLInputElement>document.getElementById('walletAddress')).value;
-    let email = (<HTMLInputElement>document.getElementById('email')).value;
-    if(email == ''){
-      this.toastr.error("Email is required");
-    }
-    else{
-      let details = {
-        "walletAddress":walletAddress,
-        "email":email
-      }
-      this.accountService.saveWalletAddress(details).subscribe( response => {
-        console.log("response",response);
-        this.thankyou = true;
-      })
-      
-    }
-  }
   addBscMainnet(){
     window['ethereum'].request({ 
      method: 'wallet_addEthereumChain',
