@@ -197,22 +197,31 @@
                                 <p class="l-font-regular text--subcontent">Please share your email and wallet addresses so we can confirm that you’re whitelisted to buy a Veteran Bulldog NFT.
                                 </p>
                             </div>
+                        <form [formGroup]="registerForm" (ngSubmit)="registerProcess(registerForm)" action=""method="post">
                             <div class="roadmap__form">
                                 <div class="form-floating mb-4">
-                                    <input type="email" id="email" class="form-control bg--input rounded--sm l-font--bold"  placeholder="yokeshshankar@gmail.com">
+                                    <input type="email" id="email" class="form-control bg--input rounded--sm l-font--bold"  placeholder="yokeshshankar@gmail.com" formControlName="email">
                                     <label for="floatingInput" class="text__input--label l-font--bold">Email</label>
+                                    <div *ngIf="submitted && formGet.email.errors" class="invalid-feedback-custom">
+                                        <small *ngIf="formGet.email.errors.required">Please Enter Email</small>
+                                        <small *ngIf="formGet.email.errors.email">Please Enter Valid Email</small>
+                                    </div>
                                 </div>
                                 <div class="form-floating mb-4">
-                                    <input *ngIf="account.address" type="text" class="form-control bg--input rounded--sm l-font--bold" value="{{account.address}}"  id="walletAddress" readonly>
+                                    <input *ngIf="account.address" type="text" class="form-control bg--input rounded--sm l-font--bold" value="{{account.address}}"  id="walletAddress" readonly formControlName="walletAddress">
                                     <input *ngIf="!account.address" type="text" class="form-control bg--input rounded--sm l-font--bold" value="Connect Wallet to retrieve" address id="walletAddress" readonly>
                                     <label for="floatingPassword" class="text__input--label l-font--bold">Wallet Address</label>
+                                    <div *ngIf="submitted && formGet.walletAddress.errors" class="invalid-feedback-custom">
+                                        <small *ngIf="formGet.walletAddress.errors.required">Please Enter Wallet Address</small>
+                                    </div>
                                 </div>
                             </div>
                                 
                             <div class="d-xl-flex justify-content-between gap-3">
                                 <button *ngIf="account.address == ''" type="button" class="btn btn--ekta w-100 text-white rounded--sm p-3 l-font--bold connect-btn" (click)="connectWallet()">Connect Wallet</button>
-                                <button *ngIf="account.address !== ''" type="button" class="btn btn--ekta w-100 text-white rounded--sm p-3 l-font--bold" (click)="formSubmit()">Submit</button>
+                                <button *ngIf="account.address !== ''" type="submit" class="btn btn--ekta w-100 text-white rounded--sm p-3 l-font--bold">Submit</button>
                             </div>
+                        </form>
                         </div>
                     </div>
                 </div>
