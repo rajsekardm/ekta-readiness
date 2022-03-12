@@ -22,7 +22,7 @@
 
     <div id="home__roadmap" *ngIf="!thankyou">
         <div class="container">
-            <div class="row pb-md-5 mb-5 g-4">
+            <div class="row pb-md-4 g-4">
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="d-flex align-items-center justify-content-between">   
                         <span class="text-white l-font-bold p-2 px-4 rounded--sm bg--metamask w-25">Step 1</span>
@@ -123,80 +123,145 @@
                 </div>
 
                 <div class="step5--line px-0"></div>
-                <div class="row">
-                    <div class="col col-lg-8 mb-4 mb-md-0">
-                        <div class="d-flex align-items-center justify-content-start">   
-                            <span class="text-white l-font-bold p-2 px-4 rounded--sm bg--binance  me-4">Step 4</span>
-                            <div class="step4--line"></div>
-                        </div>
-                        <div class="row mt-4 pt-1 mh-80 ms-xl-2">
-                            <div class="d-md-flex p-3 border--step rounded--xl">
-                                <div class="col-12 col-md-6 mb-4 mb-md-0 me-md-4">
-                                    <div class="p-4 rounded--lg bg--ethereum mh-100 d-flex justify-content-between flex-column">
-                                        <div>
-                                            <div class="roadmap__head d-flex justify-content-between align-items-center">
-                                                <img src="assets/images/roadmap/ethereum.svg" width="150" height="50" alt="ekta">
-                                               
-                                                <div class="form-check">
-                                                    <input *ngIf="!ethToken" class="form-check-input" type="checkbox" disabled value="" id="flexCheckDefault">
-                                                    <input *ngIf="ethToken" class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
-                                                </div>
-                                            </div>
-                                            <hr class="hr--ethereum">
-                                            <div class="roadmap__content py-2">
-                                                <h4 class="text-white l-font-bold">Add $EKTA v2 (ERC20) token</h4>
-                                                <p class="text--ethereum l-font-regular">Make sure you're in the Ethereum Network when purchasing $EKTA v2 (ERC20) tokens. Click“Add” to automatically add it, or follow the guide by clicking “Show me how”.</p>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="d-xl-flex justify-content-between gap-3">
-                                            <a href="https://resources.ekta.io/add-usdekta-erc20-token-to-your-metamask-wallet/" target="_blank" class="btn bg-transparent w-100 b__btn--ethereum p-2 rounded--sm text-white l-font--bold">Show me how</a>
-                                           
-                                                <button type="button" class="btn btn--ethereum w-100 text-white rounded--sm p-2 l-font--bold mt-2 mt-xl-0" (click)="addEthToken()">Add</button>
-                                          
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 pe-md-0">
-                                    <div class="p-4 rounded--lg bg--binance mh-100 me-md-4 d-flex justify-content-between flex-column">
-                                        <div>
-                                            <div class="roadmap__head d-flex justify-content-between align-items-center">
-                                                <img src="assets/images/roadmap/binance.svg" width="150" height="50" alt="ekta">
-                                                <div class="form-check">
-                                                    <input *ngIf="!bscToken" class="form-check-input" type="checkbox" disabled value="" id="flexCheckDefault">
-                                                    <input *ngIf="bscToken" class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
-                                                </div>
-                                            </div>
-                                            <hr class="hr--binance">
-                                            <div class="roadmap__content py-2">
-                                                <h4 class="l-font-bold text--secondary">Add $EKTA v2 (BEP20) token</h4>
-                                                <p class="l-font-regular text--secondary">Make sure you’re in the Binance Smart Chain (BSC) network when purchasing $EKTA v2 (BEP20) tokens. Click “Add” to automatically add it, or follow the guide by clicking “Show me how”.</p>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="d-xl-flex justify-content-between gap-3">
-                                            <a href="https://resources.ekta.io/add-ekta-token-to-your-metamask-wallet/" target="_blank" class="btn bg-transparent w-100 b__btn--binance p-2 rounded--sm text-white l-font--bold">Show me how</a>
-                                          
-                                                <button type="button" class="btn btn--binance w-100 text-white rounded--sm p-2 l-font--bold mt-2 mt-xl-0" (click)="addBscToken()">Add</button>
-                                         
-                                            </div>
-                                    </div>
-                                </div>
-                            </div>
-                           
-                        </div>
+               
+                 
+            </div>
+            <div class="row pb-md-4 g-4">
+                <div class="col col-lg-12 mb-4">
+                    <div class="d-flex align-items-center justify-content-start">   
+                        <span class="text-white l-font-bold p-2 px-4 rounded--sm bg--binance  me-4">Step 4</span>
+                        <div class="step4--line"></div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="d-flex align-items-center justify-content-between">   
-                            <span class="text-white l-font-bold p-2 px-4 rounded--sm bg--primary w-25">Step 5</span>
-                            <!-- <div class="steps--line"></div> -->
-                        </div>
-                        <div class="p-4 rounded--lg bg--primary mt-4 mb-3 mh-80 d-flex justify-content-between flex-column">
-                            <div class="roadmap__content py-2">
-                                <h4 class="text-white l-font-bold">Submit your details</h4>
-                                <p class="l-font-regular text--subcontent">Please share your email and wallet addresses so we can confirm that you’re whitelisted to buy a Veteran Bulldog NFT.
-                                </p>
+                    <div class="row mt-4 pt-1 mh-80 ms-xl-2">
+                        <div class="d-md-flex p-3 border--step rounded--xl">
+                            <div class="col-12 col-md-6 mb-4 mb-md-0 me-md-4">
+                                <div class="p-4 rounded--lg bg--ethereum mh-100 d-flex justify-content-between flex-column">
+                                    <div>
+                                        <div class="roadmap__head d-flex justify-content-between align-items-center">
+                                            <img src="assets/images/roadmap/ethereum.svg" width="150" height="50" alt="ekta">
+                                           
+                                            <div class="form-check">
+                                                <input *ngIf="!ethToken" class="form-check-input" type="checkbox" disabled value="" id="flexCheckDefault">
+                                                <input *ngIf="ethToken" class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                        <hr class="hr--ethereum">
+                                        <div class="roadmap__content py-2">
+                                            <h4 class="text-white l-font-bold">Add $EKTA v2 (ERC20) token</h4>
+                                            <p class="text--ethereum l-font-regular">Make sure you're in the Ethereum Network when purchasing $EKTA v2 (ERC20) tokens. Click“Add” to automatically add it, or follow the guide by clicking “Show me how”.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-xl-flex justify-content-between gap-3">
+                                        <a href="https://resources.ekta.io/add-usdekta-erc20-token-to-your-metamask-wallet/" target="_blank" class="btn bg-transparent w-100 b__btn--ethereum p-2 rounded--sm text-white l-font--bold">Show me how</a>
+                                       
+                                            <button type="button" class="btn btn--ethereum w-100 text-white rounded--sm p-2 l-font--bold mt-2 mt-xl-0" (click)="addEthToken()">Add</button>
+                                      
+                                    </div>
+                                </div>
                             </div>
+                            <div class="col-12 col-md-6 pe-md-0">
+                                <div class="p-4 rounded--lg bg--binance mh-100 me-md-4 d-flex justify-content-between flex-column">
+                                    <div>
+                                        <div class="roadmap__head d-flex justify-content-between align-items-center">
+                                            <img src="assets/images/roadmap/binance.svg" width="150" height="50" alt="ekta">
+                                            <div class="form-check">
+                                                <input *ngIf="!bscToken" class="form-check-input" type="checkbox" disabled value="" id="flexCheckDefault">
+                                                <input *ngIf="bscToken" class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                        <hr class="hr--binance">
+                                        <div class="roadmap__content py-2">
+                                            <h4 class="l-font-bold text--secondary">Add $EKTA v2 (BEP20) token</h4>
+                                            <p class="l-font-regular text--secondary">Make sure you’re in the Binance Smart Chain (BSC) network when purchasing $EKTA v2 (BEP20) tokens. Click “Add” to automatically add it, or follow the guide by clicking “Show me how”.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-xl-flex justify-content-between gap-3">
+                                        <a href="https://resources.ekta.io/add-ekta-token-to-your-metamask-wallet/" target="_blank" class="btn bg-transparent w-100 b__btn--binance p-2 rounded--sm text-white l-font--bold">Show me how</a>
+                                      
+                                            <button type="button" class="btn btn--binance w-100 text-white rounded--sm p-2 l-font--bold mt-2 mt-xl-0" (click)="addBscToken()">Add</button>
+                                     
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="col col-lg-8 mb-4">
+                    <div class="d-flex align-items-center justify-content-start">   
+                        <span class="text-white l-font-bold p-2 px-4 rounded--sm bg--binance  me-4">Step 5</span>
+                        <div class="step4--line"></div>
+                    </div>
+                    <div class="row mt-4 pt-1 mh-80 ms-xl-2">
+                        <div class="d-md-flex p-3 border--step rounded--xl">
+                            <div class="col-12 col-md-6 mb-4 mb-md-0 me-md-4">
+                                <div class="p-4 rounded--lg bg--ethereum mh-100 d-flex justify-content-between flex-column">
+                                    <div>
+                                        <div class="roadmap__head d-flex justify-content-between align-items-center">
+                                            <img src="assets/images/roadmap/ethereum.svg" width="150" height="50" alt="ekta">
+                                           
+                                            <div class="form-check">
+                                                <input *ngIf="!ethToken" class="form-check-input" type="checkbox" disabled value="" id="flexCheckDefault">
+                                                <input *ngIf="ethToken" class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                        <hr class="hr--ethereum">
+                                        <div class="roadmap__content py-2">
+                                            <h4 class="text-white l-font-bold">Add USDT (ERC20) token</h4>
+                                            <p class="text--ethereum l-font-regular">Make sure you're in the Ethereum Network when purchasing USDT (ERC20) tokens. Click“Add” to automatically add it, or follow the guide by clicking “Show me how”.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-xl-flex justify-content-between gap-3">
+                                        <a href="https://resources.ekta.io/add-usdekta-erc20-token-to-your-metamask-wallet/" target="_blank" class="btn bg-transparent w-100 b__btn--ethereum p-2 rounded--sm text-white l-font--bold">Show me how</a>
+                                       
+                                            <button type="button" class="btn btn--ethereum w-100 text-white rounded--sm p-2 l-font--bold mt-2 mt-xl-0" (click)="addEthToken()">Add</button>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 pe-md-0">
+                                <div class="p-4 rounded--lg bg--binance mh-100 me-md-4 d-flex justify-content-between flex-column">
+                                    <div>
+                                        <div class="roadmap__head d-flex justify-content-between align-items-center">
+                                            <img src="assets/images/roadmap/binance.svg" width="150" height="50" alt="ekta">
+                                            <div class="form-check">
+                                                <input *ngIf="!bscToken" class="form-check-input" type="checkbox" disabled value="" id="flexCheckDefault">
+                                                <input *ngIf="bscToken" class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
+                                            </div>
+                                        </div>
+                                        <hr class="hr--binance">
+                                        <div class="roadmap__content py-2">
+                                            <h4 class="l-font-bold text--secondary">Add USDT (BEP20) token</h4>
+                                            <p class="l-font-regular text--secondary">Make sure you’re in the Binance Smart Chain (BSC) network when purchasing USDT (BEP20) tokens. Click “Add” to automatically add it, or follow the guide by clicking “Show me how”.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-xl-flex justify-content-between gap-3">
+                                        <a href="https://resources.ekta.io/add-ekta-token-to-your-metamask-wallet/" target="_blank" class="btn bg-transparent w-100 b__btn--binance p-2 rounded--sm text-white l-font--bold">Show me how</a>
+                                      
+                                            <button type="button" class="btn btn--binance w-100 text-white rounded--sm p-2 l-font--bold mt-2 mt-xl-0" (click)="addBscToken()">Add</button>
+                                     
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="d-flex align-items-center justify-content-between">   
+                        <span class="text-white l-font-bold p-2 px-4 mb-1 rounded--sm bg--primary w-25">Step 6</span>
+                        <!-- <div class="steps--line"></div> -->
+                    </div>
+                    <div class="p-4 rounded--lg bg--primary mt-4 mb-3 mh-80 d-flex justify-content-between flex-column">
+                        <div class="roadmap__content py-2">
+                            <h4 class="text-white l-font-bold">Submit your details</h4>
+                            <p class="l-font-regular text--subcontent">Please share your email and wallet addresses so we can confirm that you’re whitelisted to buy a Veteran Bulldog NFT.
+                            </p>
+                        </div>
                         <form [formGroup]="registerForm" (ngSubmit)="registerProcess(registerForm)" action=""method="post">
                             <div class="roadmap__form">
                                 <div class="form-floating mb-4">
@@ -222,10 +287,8 @@
                                 <button *ngIf="account.address !== ''" type="submit" class="btn btn--ekta w-100 text-white rounded--sm p-3 l-font--bold">Submit</button>
                             </div>
                         </form>
-                        </div>
                     </div>
                 </div>
-                 
             </div>
         </div>
     </div>
