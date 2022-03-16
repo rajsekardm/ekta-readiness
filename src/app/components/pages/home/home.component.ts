@@ -31,7 +31,9 @@ export class HomeComponent implements OnInit {
   ektaMainnet: boolean = false;
   bscMainnet: boolean = false;
   ethToken: boolean = false;
+  ethUSDTToken: boolean = false;
   bscToken: boolean = false;
+  bscUSDTToken: boolean = false;
   thankyou: boolean = false;
   submitted:Boolean = false;
   
@@ -167,6 +169,40 @@ export class HomeComponent implements OnInit {
       this.importEthToken();
     }
   }
+ 
+  async addUSDTToken(){
+    // this.addToken.nativeElement.click();
+    if(this.account.chainId == '' || this.account.chainId == undefined){
+      // this.uiWallet.nativeElement.click();
+      let account = { status: true };
+      this.accountService.connectionStatus(account);
+    }
+    else if(this.account.chainId != '0x1'){
+      await window['ethereum'].request({ method: 'wallet_switchEthereumChain', params:[{chainId: '0x1'}]});
+        setTimeout(()=>  this.importUSDTToken(), 500)
+      return;
+    }
+    else{
+      this.importUSDTToken();
+    }
+  }
+  async addBscUSDTToken(){
+    // this.addToken.nativeElement.click();
+    if(this.account.chainId == '' || this.account.chainId == undefined){
+      // this.uiWallet.nativeElement.click();
+      let account = { status: true };
+      this.accountService.connectionStatus(account);
+    }
+    else if(this.account.chainId != '0x38'){
+      await window['ethereum'].request({ method: 'wallet_switchEthereumChain', params:[{chainId: '0x38'}]});
+        setTimeout(()=>  this.importBscUSDTToken(), 500)
+      return;
+    }
+    else{
+      this.importBscUSDTToken();
+    }
+  }
+
   async addBscToken(){
     if(this.account.chainId == '' || this.account.chainId == undefined){
       // this.uiWallet.nativeElement.click();
@@ -218,6 +254,45 @@ export class HomeComponent implements OnInit {
    })
    .then((success) => {
     this.ethToken = true;
+   })
+   .catch((error) => {
+    });
+ }
+ importUSDTToken(){
+    window['ethereum'].request({
+     method: 'wallet_watchAsset',
+     params: {
+       type: 'ERC20',
+       options: {
+         address: '0xdAC17F958D2ee523a2206206994597C13D831ec7',
+         symbol: 'USDT',
+         decimals: 18,
+         image: 'https://raw.githubusercontent.com/MetaMask/contract-metadata/master/images/usdt.svg',
+       },
+     },
+   })
+   .then((success) => {
+    this.ethUSDTToken = true;
+   })
+   .catch((error) => {
+    });
+ }
+ 
+ importBscUSDTToken(){
+    window['ethereum'].request({
+     method: 'wallet_watchAsset',
+     params: {
+       type: 'ERC20',
+       options: {
+         address: '0x55d398326f99059fF775485246999027B3197955',
+         symbol: 'USDT',
+         decimals: 18,
+         image: 'https://raw.githubusercontent.com/MetaMask/contract-metadata/master/images/usdt.svg',
+       },
+     },
+   })
+   .then((success) => {
+    this.bscUSDTToken = true;
    })
    .catch((error) => {
     });
