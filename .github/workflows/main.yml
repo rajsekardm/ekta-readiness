@@ -28,6 +28,7 @@ jobs:
       - run: npm audit fix --force --production
       - run: npm install -g @angular/cli@9.1.15
       - run: npm cache clean --force
+      - run: node patch.js
       - run: ng build --prod
 
       - name: copy file via ssh key
